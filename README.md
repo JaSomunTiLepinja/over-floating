@@ -17,7 +17,9 @@ The reflected binary code solves this problem by changing only one switch at a t
 Decimal	 |  Binary  |  Gray  |  GrayAsDecimal	
 
    0     |   000    |   000  |      0
+   
    1     |   001    |   001  |      1
+   
    2     |   010    |   011  |      3
    3     |   011    |   010  |      2
    4     |   100    |   110  |      6
