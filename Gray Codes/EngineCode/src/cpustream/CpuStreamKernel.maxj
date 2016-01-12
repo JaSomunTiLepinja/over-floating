@@ -1,0 +1,27 @@
+package cpustream;
+
+import com.maxeler.maxcompiler.v2.kernelcompiler.Kernel;
+import com.maxeler.maxcompiler.v2.kernelcompiler.KernelParameters;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEType;
+import com.maxeler.maxcompiler.v2.kernelcompiler.types.base.DFEVar;
+
+class CpuStreamKernel extends Kernel {
+
+	private static final DFEType type = dfeInt(32);
+
+
+	protected CpuStreamKernel(KernelParameters parameters) {
+		super(parameters);
+
+		DFEVar y = io.input("y", type);
+
+		DFEVar cycle0 = y ^ (y >> 1);
+		DFEVar cycle1 = cycle0 ^ cycle0 >> 2;
+		DFEVar cycle2 = cycle1 ^ cycle1 >> 4;
+		DFEVar cycle3 = cycle2 ^ cycle2 >> 8;
+		DFEVar cycle4 = cycle3 ^ cycle3 >> 16;
+
+		io.output("s", cycle4, type);
+
+	}
+}
