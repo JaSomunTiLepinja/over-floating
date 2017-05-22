@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maxCompilerManager version="2">
+<enginePart internalEngineSubproject="domaci_EngineCode" isSrcBin="false" isUseDefaultSelected="false" outputLocation="/domaci_EngineCode/bin" projectName="domaci"/>
+<cpuPart internalCpuSubproject="domaci_CPUCode"/>
+<watchedFiles/>
+</maxCompilerManager>
